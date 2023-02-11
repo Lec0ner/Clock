@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #b3afaf;
+}
+/* === Часы === */
+.clock{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	border: 10px solid #b0f4fdcc;
+	border-radius: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: inset 18px 18px 29px #cefffb,
+							inset -18px -18px 29px #bcd3d1;
+}
+/* === Часовая стрелка === */
+.hour{
+	position: absolute;
+	height: 140px;
+	width: 10px;
+	background: #ffffff;
+	border-radius: 5px;
+	top: 50%;
+	left: calc(50% - 5.5px);
+	animation: spin 3600s linear infinite;
+	transform-origin: top;
+	box-shadow: 0 0 20px #5c5a5a;
+}
+/* === Минутная стрелка === */
+.mint{
+	position: absolute;
+	width: 10px;
+	height: 170px;
+	background: #9ff3c9;
+	border-radius: 5px;
+	top: 50%;
+	left: calc(50% - 5.5px);
+	animation: spin 60s linear infinite;
+	transform-origin: top;
+	z-index: 1;
+	box-shadow: 0 0 20px #5c5a5a;
+}
+/* === Секундная стрелка === */
+.sec{
+	position: absolute;
+	height: 200px;
+	width: 10px;
+	background: rgb(247, 255, 176);
+	border-radius: 5px;
+	top: 50%;
+	left: calc(50% - 5.5px);
+	animation: spin 1s linear infinite;
+	transform-origin: top;
+	z-index: 2;
+	box-shadow: 0 0 20px #5c5a5a;
+}
+/* === Описание анимации стрелок === */
+@keyframes spin{
+	0%{
+		transform: rotate(-180deg);
+	}
+	100%{
+		transform: rotate(180deg);
+	}
+}
+/* === Точки отмечающие время === */
+body::before{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	border-radius: 50%;
+	box-shadow: inset 0 0 10px #000;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+}
+/* === Точки отмечающие время === */
+body::after{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #161623;
+	left: 50%;
+	top: calc(50% - 230px);
+	z-index: 2;
+	transform: translateX(-50%);
+	box-shadow: 230px 230px 0 0 #161623, -230px 230px 0 0 #161623,
+	0 450px 0 0 #161623;
+}
+
+/* === Для реальных часов использовать hour:216000s mint:3600s sec:60s === */
