@@ -1,20 +1,20 @@
 *{
 	margin: 0;
 	padding: 0;
-	background-color: #b3afaf;
+	background-color: #d3f6ff;
 }
 /* === Часы === */
 .clock{
 	position: absolute;
 	width: 500px;
 	height: 500px;
-	border: 10px solid #b0f4fdcc;
+	border: 10px solid #cf95ffcc;
 	border-radius: 50%;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	box-shadow: inset 18px 18px 29px #cefffb,
-							inset -18px -18px 29px #bcd3d1;
+	box-shadow: inset 18px 18px 29px #f4d1ff,
+							inset -18px -18px 29px #fee6ff;
 }
 /* === Часовая стрелка === */
 .hour{
@@ -46,8 +46,8 @@
 /* === Секундная стрелка === */
 .sec{
 	position: absolute;
-	height: 200px;
 	width: 10px;
+	height: 200px;
 	background: rgb(247, 255, 176);
 	border-radius: 5px;
 	top: 50%;
@@ -96,4 +96,4 @@ body::after{
 	0 450px 0 0 #161623;
 }
 
-/* === Для реальных часов использовать hour:216000s mint:3600s sec:60s === */
+/* === Для реальных часов использовать hour:86400s mint:3600s sec:60s === */
